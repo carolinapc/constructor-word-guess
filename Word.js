@@ -24,11 +24,11 @@ function Word(word){
         var notGuessedLetters = this.letters.filter(x => !x.guessed);
 
         if (this.lettersRemaining === notGuessedLetters.length) {
-            console.log("\nINCORRECT!");
+            console.log("\nINCORRECT!".red);
             this.guessRemaining--;
         }
         else {
-            console.log("\nCORRECT!");
+            console.log("\nCORRECT!".green);
         }
 
         this.lettersRemaining = notGuessedLetters.length;
